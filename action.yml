@@ -1,0 +1,24 @@
+name: Debsign
+description: Sign a debian source package and upload to PPA
+
+inputs:
+  ppa:
+    description: PPA to upload files
+    required: true
+  gpg_key:
+    description: Private key used to sign files
+    required: true
+  gpg_pass:
+    description: Passphrase for the GPG key
+    required: false
+  ssh_key:
+    description: Private key used to upload files
+    required: true
+  ssh_pass:
+    description: Passphrase for the SSH key
+    required: false
+
+runs:
+  using: docker
+  image: Dockerfile
+  post-entrypoint: cleanup.sh

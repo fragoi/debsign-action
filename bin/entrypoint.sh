@@ -4,7 +4,7 @@ eval $(ssh-agent -s)
 
 gpg-import.sh
 
-# debsign
+debsign -S
 
 ssh-import.sh
 

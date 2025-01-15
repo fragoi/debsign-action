@@ -8,4 +8,4 @@ sign.sh -S
 
 ssh-import.sh
 
-# dput ppa:${INPUT_PPA}
+dput $INPUT_PPA *_source.changes

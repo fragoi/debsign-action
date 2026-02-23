@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-if read pass; then
+if read -r pass; then
   echo "$pass"
   exit 0
 else
